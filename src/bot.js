@@ -2,10 +2,9 @@ const { Client, IntentsBitField, EmbedBuilder, Events, SlashCommandBuilder, Butt
 const { joinVoiceChannel, createAudioPlayer, createAudioResource, AudioPlayerStatus } = require("@discordjs/voice");
 const WebSocket = require("ws");
 const fs = require("fs");
-require('dotenv').config()
 
-const token = process.env.TOKEN
-const ws = new WebSocket("ws://127.0.0.1:8765");
+const token = "YOUR_TOKEN_HERE"
+// const ws = new WebSocket("ws://127.0.0.1:8765");
 
 // const data = JSON.parse(fs.readFileSync("./data.json", "utf8")); no :-)
 // const user_data = JSON.parse(fs.readFileSync("./userdata.json", "utf8")); no :-)
@@ -33,4 +32,4 @@ const client = new Client({
   ],
 });
 
-client.login("YOUR_TOKEN_HERE")
+client.login(token)
